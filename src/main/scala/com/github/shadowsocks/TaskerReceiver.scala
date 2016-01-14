@@ -52,6 +52,7 @@ class TaskerReceiver extends BroadcastReceiver {
       case Some(p) =>
         Utils.stopSsService(context)
         ShadowsocksApplication.switchProfile(settings.profileId)
+        ShadowsocksApplication.profileId = settings.profileId
         true
       case _ => false
     }
